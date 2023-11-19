@@ -29,95 +29,96 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnStudentSearch = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnEmail = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.bookDataGridView = new System.Windows.Forms.DataGridView();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnGiveAccess = new System.Windows.Forms.Button();
+            this.btnAddTransaction = new System.Windows.Forms.Button();
+            this.btnManageStudentProfile = new System.Windows.Forms.Button();
+            this.btnPendingTransactions = new System.Windows.Forms.Button();
+            this.btnTransactionHistory = new System.Windows.Forms.Button();
+            this.btnViewInventory = new System.Windows.Forms.Button();
+            this.dgvAddStudent = new System.Windows.Forms.DataGridView();
+            this.txtStudentSearch = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtStudentID = new System.Windows.Forms.TextBox();
+            this.txtStudentNumber = new System.Windows.Forms.TextBox();
             this.txtStudentFName = new System.Windows.Forms.TextBox();
             this.txtStudentEmail = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnStudentEdit = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.addBtn = new System.Windows.Forms.Button();
-            this._GlendaleLibrarySystem_TestDataSet1 = new FormCollection._GlendaleLibrarySystem_TestDataSet1();
+            this.btnStudentAdd = new System.Windows.Forms.Button();
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentTableAdapter = new FormCollection._GlendaleLibrarySystem_TestDataSet1TableAdapters.StudentTableAdapter();
             this.txtStudentMName = new System.Windows.Forms.TextBox();
             this.txtStudentLName = new System.Windows.Forms.TextBox();
             this.txtStudentSuffix = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnStudentSearch.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._GlendaleLibrarySystem_TestDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // btnStudentSearch
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1401, 100);
-            this.panel1.TabIndex = 8;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.btnStudentSearch.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnStudentSearch.Controls.Add(this.panel3);
+            this.btnStudentSearch.Controls.Add(this.pictureBox1);
+            this.btnStudentSearch.Controls.Add(this.label2);
+            this.btnStudentSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStudentSearch.Location = new System.Drawing.Point(0, 0);
+            this.btnStudentSearch.Name = "btnStudentSearch";
+            this.btnStudentSearch.Size = new System.Drawing.Size(1401, 100);
+            this.btnStudentSearch.TabIndex = 8;
+            this.btnStudentSearch.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button8);
-            this.panel3.Controls.Add(this.button7);
+            this.panel3.Controls.Add(this.btnLogout);
+            this.panel3.Controls.Add(this.btnEmail);
             this.panel3.Location = new System.Drawing.Point(1252, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(146, 94);
             this.panel3.TabIndex = 7;
             // 
-            // button8
+            // btnLogout
             // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Chocolate;
-            this.button8.Location = new System.Drawing.Point(0, 46);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(146, 46);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "Logout";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.Chocolate;
+            this.btnLogout.Location = new System.Drawing.Point(0, 46);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(146, 46);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // button7
+            // btnEmail
             // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Chocolate;
-            this.button7.Location = new System.Drawing.Point(0, 0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(146, 46);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "Welcome Admin!";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnEmail.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmail.FlatAppearance.BorderSize = 0;
+            this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmail.ForeColor = System.Drawing.Color.Chocolate;
+            this.btnEmail.Location = new System.Drawing.Point(0, 0);
+            this.btnEmail.Name = "btnEmail";
+            this.btnEmail.Size = new System.Drawing.Size(146, 46);
+            this.btnEmail.TabIndex = 0;
+            this.btnEmail.Text = "Welcome Admin!";
+            this.btnEmail.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -146,118 +147,124 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel4.Controls.Add(this.button6);
-            this.panel4.Controls.Add(this.button5);
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.button9);
-            this.panel4.Controls.Add(this.button10);
+            this.panel4.Controls.Add(this.btnGiveAccess);
+            this.panel4.Controls.Add(this.btnAddTransaction);
+            this.panel4.Controls.Add(this.btnManageStudentProfile);
+            this.panel4.Controls.Add(this.btnPendingTransactions);
+            this.panel4.Controls.Add(this.btnTransactionHistory);
+            this.panel4.Controls.Add(this.btnViewInventory);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 100);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 503);
             this.panel4.TabIndex = 9;
             // 
-            // button6
+            // btnGiveAccess
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(0, 300);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(200, 60);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Give Access";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnGiveAccess.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGiveAccess.FlatAppearance.BorderSize = 0;
+            this.btnGiveAccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGiveAccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGiveAccess.ForeColor = System.Drawing.Color.White;
+            this.btnGiveAccess.Location = new System.Drawing.Point(0, 300);
+            this.btnGiveAccess.Name = "btnGiveAccess";
+            this.btnGiveAccess.Size = new System.Drawing.Size(200, 60);
+            this.btnGiveAccess.TabIndex = 5;
+            this.btnGiveAccess.Text = "Give Access";
+            this.btnGiveAccess.UseVisualStyleBackColor = true;
+            this.btnGiveAccess.Click += new System.EventHandler(this.btnGiveAccess_Click);
             // 
-            // button5
+            // btnAddTransaction
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 240);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 60);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Add Request";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnAddTransaction.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddTransaction.FlatAppearance.BorderSize = 0;
+            this.btnAddTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTransaction.ForeColor = System.Drawing.Color.White;
+            this.btnAddTransaction.Location = new System.Drawing.Point(0, 240);
+            this.btnAddTransaction.Name = "btnAddTransaction";
+            this.btnAddTransaction.Size = new System.Drawing.Size(200, 60);
+            this.btnAddTransaction.TabIndex = 4;
+            this.btnAddTransaction.Text = "Add Transaction";
+            this.btnAddTransaction.UseVisualStyleBackColor = true;
+            this.btnAddTransaction.Click += new System.EventHandler(this.btnAddRequest_Click);
             // 
-            // button4
+            // btnManageStudentProfile
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 180);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 60);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Manage Student Profile";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnManageStudentProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageStudentProfile.FlatAppearance.BorderSize = 0;
+            this.btnManageStudentProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageStudentProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageStudentProfile.ForeColor = System.Drawing.Color.White;
+            this.btnManageStudentProfile.Location = new System.Drawing.Point(0, 180);
+            this.btnManageStudentProfile.Name = "btnManageStudentProfile";
+            this.btnManageStudentProfile.Size = new System.Drawing.Size(200, 60);
+            this.btnManageStudentProfile.TabIndex = 3;
+            this.btnManageStudentProfile.Text = "Manage Student Profile";
+            this.btnManageStudentProfile.UseVisualStyleBackColor = true;
+            this.btnManageStudentProfile.Click += new System.EventHandler(this.btnStudent_Click);
             // 
-            // button3
+            // btnPendingTransactions
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 120);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 60);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Pending Transactions";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnPendingTransactions.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPendingTransactions.FlatAppearance.BorderSize = 0;
+            this.btnPendingTransactions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPendingTransactions.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPendingTransactions.ForeColor = System.Drawing.Color.White;
+            this.btnPendingTransactions.Location = new System.Drawing.Point(0, 120);
+            this.btnPendingTransactions.Name = "btnPendingTransactions";
+            this.btnPendingTransactions.Size = new System.Drawing.Size(200, 60);
+            this.btnPendingTransactions.TabIndex = 2;
+            this.btnPendingTransactions.Text = "Pending Transactions";
+            this.btnPendingTransactions.UseVisualStyleBackColor = true;
+            this.btnPendingTransactions.Click += new System.EventHandler(this.btnPendingTransactions_Click);
             // 
-            // button9
+            // btnTransactionHistory
             // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(0, 60);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(200, 60);
-            this.button9.TabIndex = 1;
-            this.button9.Text = "Transaction History";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnTransactionHistory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTransactionHistory.FlatAppearance.BorderSize = 0;
+            this.btnTransactionHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransactionHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransactionHistory.ForeColor = System.Drawing.Color.White;
+            this.btnTransactionHistory.Location = new System.Drawing.Point(0, 60);
+            this.btnTransactionHistory.Name = "btnTransactionHistory";
+            this.btnTransactionHistory.Size = new System.Drawing.Size(200, 60);
+            this.btnTransactionHistory.TabIndex = 1;
+            this.btnTransactionHistory.Text = "Transaction History";
+            this.btnTransactionHistory.UseVisualStyleBackColor = true;
+            this.btnTransactionHistory.Click += new System.EventHandler(this.btnTransactionHistory_Click);
             // 
-            // button10
+            // btnViewInventory
             // 
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(0, 0);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(200, 60);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "View Inventory";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnViewInventory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnViewInventory.FlatAppearance.BorderSize = 0;
+            this.btnViewInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewInventory.ForeColor = System.Drawing.Color.White;
+            this.btnViewInventory.Location = new System.Drawing.Point(0, 0);
+            this.btnViewInventory.Name = "btnViewInventory";
+            this.btnViewInventory.Size = new System.Drawing.Size(200, 60);
+            this.btnViewInventory.TabIndex = 0;
+            this.btnViewInventory.Text = "View Inventory";
+            this.btnViewInventory.UseVisualStyleBackColor = true;
+            this.btnViewInventory.Click += new System.EventHandler(this.button10_Click);
             // 
-            // bookDataGridView
+            // dgvAddStudent
             // 
-            this.bookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bookDataGridView.Location = new System.Drawing.Point(226, 121);
-            this.bookDataGridView.Name = "bookDataGridView";
-            this.bookDataGridView.Size = new System.Drawing.Size(660, 415);
-            this.bookDataGridView.TabIndex = 11;
-            this.bookDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookDataGridView_CellContentClick);
+            this.dgvAddStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAddStudent.Location = new System.Drawing.Point(226, 121);
+            this.dgvAddStudent.Name = "dgvAddStudent";
+            this.dgvAddStudent.Size = new System.Drawing.Size(660, 415);
+            this.dgvAddStudent.TabIndex = 11;
+            this.dgvAddStudent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookDataGridView_CellContentClick);
             // 
-            // txtSearch
+            // txtStudentSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(933, 140);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(332, 20);
-            this.txtSearch.TabIndex = 12;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtStudentSearch.Location = new System.Drawing.Point(933, 140);
+            this.txtStudentSearch.Name = "txtStudentSearch";
+            this.txtStudentSearch.Size = new System.Drawing.Size(332, 20);
+            this.txtStudentSearch.TabIndex = 12;
+            this.txtStudentSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // button1
             // 
@@ -274,12 +281,12 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtStudentID
+            // txtStudentNumber
             // 
-            this.txtStudentID.Location = new System.Drawing.Point(933, 241);
-            this.txtStudentID.Name = "txtStudentID";
-            this.txtStudentID.Size = new System.Drawing.Size(332, 20);
-            this.txtStudentID.TabIndex = 14;
+            this.txtStudentNumber.Location = new System.Drawing.Point(933, 241);
+            this.txtStudentNumber.Name = "txtStudentNumber";
+            this.txtStudentNumber.Size = new System.Drawing.Size(332, 20);
+            this.txtStudentNumber.TabIndex = 14;
             // 
             // txtStudentFName
             // 
@@ -295,19 +302,20 @@
             this.txtStudentEmail.Size = new System.Drawing.Size(332, 20);
             this.txtStudentEmail.TabIndex = 16;
             // 
-            // button2
+            // btnStudentEdit
             // 
-            this.button2.BackColor = System.Drawing.Color.Yellow;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(1152, 400);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 23);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Edit";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnStudentEdit.BackColor = System.Drawing.Color.Yellow;
+            this.btnStudentEdit.FlatAppearance.BorderSize = 0;
+            this.btnStudentEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudentEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudentEdit.ForeColor = System.Drawing.Color.Black;
+            this.btnStudentEdit.Location = new System.Drawing.Point(1152, 400);
+            this.btnStudentEdit.Name = "btnStudentEdit";
+            this.btnStudentEdit.Size = new System.Drawing.Size(83, 23);
+            this.btnStudentEdit.TabIndex = 17;
+            this.btnStudentEdit.Text = "Edit";
+            this.btnStudentEdit.UseVisualStyleBackColor = false;
+            this.btnStudentEdit.Click += new System.EventHandler(this.btnStudentEdit_Click);
             // 
             // label3
             // 
@@ -325,9 +333,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(929, 218);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 20);
+            this.label1.Size = new System.Drawing.Size(130, 20);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Student ID:";
+            this.label1.Text = "Student Number:";
             // 
             // label4
             // 
@@ -335,9 +343,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(929, 280);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 20);
+            this.label4.Size = new System.Drawing.Size(90, 20);
             this.label4.TabIndex = 20;
-            this.label4.Text = "Student Name:";
+            this.label4.Text = "First Name:";
             // 
             // label5
             // 
@@ -349,34 +357,24 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "Email Address:";
             // 
-            // addBtn
+            // btnStudentAdd
             // 
-            this.addBtn.BackColor = System.Drawing.Color.Yellow;
-            this.addBtn.FlatAppearance.BorderSize = 0;
-            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addBtn.ForeColor = System.Drawing.Color.Black;
-            this.addBtn.Location = new System.Drawing.Point(1268, 400);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(83, 23);
-            this.addBtn.TabIndex = 22;
-            this.addBtn.Text = "Add";
-            this.addBtn.UseVisualStyleBackColor = false;
-            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
-            // 
-            // _GlendaleLibrarySystem_TestDataSet1
-            // 
-            this._GlendaleLibrarySystem_TestDataSet1.DataSetName = "_GlendaleLibrarySystem_TestDataSet1";
-            this._GlendaleLibrarySystem_TestDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btnStudentAdd.BackColor = System.Drawing.Color.Yellow;
+            this.btnStudentAdd.FlatAppearance.BorderSize = 0;
+            this.btnStudentAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudentAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudentAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnStudentAdd.Location = new System.Drawing.Point(1268, 400);
+            this.btnStudentAdd.Name = "btnStudentAdd";
+            this.btnStudentAdd.Size = new System.Drawing.Size(83, 23);
+            this.btnStudentAdd.TabIndex = 22;
+            this.btnStudentAdd.Text = "Add";
+            this.btnStudentAdd.UseVisualStyleBackColor = false;
+            this.btnStudentAdd.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // studentBindingSource
             // 
             this.studentBindingSource.DataMember = "Student";
-            this.studentBindingSource.DataSource = this._GlendaleLibrarySystem_TestDataSet1;
-            // 
-            // studentTableAdapter
-            // 
-            this.studentTableAdapter.ClearBeforeFill = true;
             // 
             // txtStudentMName
             // 
@@ -399,40 +397,72 @@
             this.txtStudentSuffix.Size = new System.Drawing.Size(35, 20);
             this.txtStudentSuffix.TabIndex = 25;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1036, 280);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 20);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Middle Name:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(1149, 280);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 20);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Last Name:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(1278, 280);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 20);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Suffix:";
+            // 
             // FormAddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1401, 603);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtStudentSuffix);
             this.Controls.Add(this.txtStudentLName);
             this.Controls.Add(this.txtStudentMName);
-            this.Controls.Add(this.addBtn);
+            this.Controls.Add(this.btnStudentAdd);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnStudentEdit);
             this.Controls.Add(this.txtStudentEmail);
             this.Controls.Add(this.txtStudentFName);
-            this.Controls.Add(this.txtStudentID);
+            this.Controls.Add(this.txtStudentNumber);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.bookDataGridView);
+            this.Controls.Add(this.txtStudentSearch);
+            this.Controls.Add(this.dgvAddStudent);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnStudentSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormAddStudent";
             this.Text = "FormAddStudent";
             this.Load += new System.EventHandler(this.FormAddStudent_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.btnStudentSearch.ResumeLayout(false);
+            this.btnStudentSearch.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._GlendaleLibrarySystem_TestDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddStudent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -441,36 +471,39 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel btnStudentSearch;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnEmail;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.DataGridView bookDataGridView;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnGiveAccess;
+        private System.Windows.Forms.Button btnAddTransaction;
+        private System.Windows.Forms.Button btnManageStudentProfile;
+        private System.Windows.Forms.Button btnPendingTransactions;
+        private System.Windows.Forms.Button btnTransactionHistory;
+        private System.Windows.Forms.Button btnViewInventory;
+        private System.Windows.Forms.DataGridView dgvAddStudent;
+        private System.Windows.Forms.TextBox txtStudentSearch;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtStudentID;
+        private System.Windows.Forms.TextBox txtStudentNumber;
         private System.Windows.Forms.TextBox txtStudentFName;
         private System.Windows.Forms.TextBox txtStudentEmail;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnStudentEdit;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button addBtn;
-        private _GlendaleLibrarySystem_TestDataSet1 _GlendaleLibrarySystem_TestDataSet1;
+        private System.Windows.Forms.Button btnStudentAdd;
+        
         private System.Windows.Forms.BindingSource studentBindingSource;
-        private _GlendaleLibrarySystem_TestDataSet1TableAdapters.StudentTableAdapter studentTableAdapter;
+        
         private System.Windows.Forms.TextBox txtStudentMName;
         private System.Windows.Forms.TextBox txtStudentLName;
         private System.Windows.Forms.TextBox txtStudentSuffix;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

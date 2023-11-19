@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using FormCollection.Database;
 
 namespace FormCollection.Forms
 {
     public partial class FormLogin : Form
     {
+
+        GlendaleLibrarySystemEntities db = new GlendaleLibrarySystemEntities();
+
         public FormLogin()
         {
             InitializeComponent();
@@ -38,42 +42,62 @@ namespace FormCollection.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            String username, password;
+            string email = txtEmail.Text;
+            string password = txtPassword.Text;
 
-            username = txtEmail.Text;
-            password = txtPassword.Text;
-
-            try
+            if (IsValidUser(email, password))
             {
-                String querry = "SELECT * FROM UserLogin WHERE EmailAddress = '" + txtEmail.Text + "' AND Password = '" + txtPassword.Text + "'";
-                SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
-
-                DataTable dtable = new DataTable();
-                sda.Fill(dtable);
-
-                if (dtable.Rows.Count > 0)
-                {
-                    username = txtEmail.Text;
-                    password = txtPassword.Text;
-
-                    FormViewInventory formViewInventory = new FormViewInventory();
-                    formViewInventory.Show();
-                    this.Hide();
-
-                }
-                else
-                {
-                    MessageBox.Show("Invalid Login Details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtEmail.Clear();
-                    txtPassword.Clear();
-                }
-
+                MessageBox.Show("Login successful!");
+                // Add code to open the main form or perform other actions after login
+                FormViewInventory formViewInventory = new FormViewInventory(email);
+                  formViewInventory.Show();
+                  this.Hide();
             }
-            catch
+            else
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Invalid email or password. Please try again.");
             }
 
+
+
+
+
+            //try
+            //{
+            //    String querry = "SELECT * FROM UserLogin WHERE EmailAddress = '" + txtEmail.Text + "' AND Password = '" + txtPassword.Text + "'";
+            //    SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
+
+            //    DataTable dtable = new DataTable();
+            //    sda.Fill(dtable);
+
+            //    if (dtable.Rows.Count > 0)
+            //    {
+            //        username = txtEmail.Text;
+            //        password = txtPassword.Text;
+
+            //        FormViewInventory formViewInventory = new FormViewInventory();
+            //        formViewInventory.Show();
+            //        this.Hide();
+
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Invalid Login Details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        txtEmail.Clear();
+            //        txtPassword.Clear();
+            //    }
+
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Error");
+            //}
+
+        }
+        private bool IsValidUser(string email, string password)
+        {
+            // Use Entity Framework to check if the user exists with the given email and password
+            return db.UserLogin.Any(u => u.EmailAddress == email && u.Password == password);
         }
     }
 }

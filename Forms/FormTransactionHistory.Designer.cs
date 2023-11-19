@@ -30,22 +30,23 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnEmail = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnGiveAccess = new System.Windows.Forms.Button();
+            this.btnAddTransaction = new System.Windows.Forms.Button();
+            this.btnManageStudentProfile = new System.Windows.Forms.Button();
+            this.btnPendingTransactions = new System.Windows.Forms.Button();
+            this.btnTransactionHistory = new System.Windows.Forms.Button();
+            this.btnViewInventory = new System.Windows.Forms.Button();
             this.dgvTransaction = new System.Windows.Forms.DataGridView();
             this.btnPrintReport = new System.Windows.Forms.Button();
-            this.btnDaily = new System.Windows.Forms.Button();
-            this.btnWeekly = new System.Windows.Forms.Button();
-            this.btnMonthly = new System.Windows.Forms.Button();
+            this.btnDailyReport = new System.Windows.Forms.Button();
+            this.btnWeeklyReport = new System.Windows.Forms.Button();
+            this.btnMonthlyReport = new System.Windows.Forms.Button();
+            this.btnOverdue = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,40 +68,41 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button8);
-            this.panel3.Controls.Add(this.button7);
+            this.panel3.Controls.Add(this.btnLogout);
+            this.panel3.Controls.Add(this.btnEmail);
             this.panel3.Location = new System.Drawing.Point(1252, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(146, 94);
             this.panel3.TabIndex = 7;
             // 
-            // button8
+            // btnLogout
             // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Chocolate;
-            this.button8.Location = new System.Drawing.Point(0, 46);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(146, 46);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "Logout";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.Chocolate;
+            this.btnLogout.Location = new System.Drawing.Point(0, 46);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(146, 46);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // button7
+            // btnEmail
             // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Chocolate;
-            this.button7.Location = new System.Drawing.Point(0, 0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(146, 46);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "Welcome Admin!";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnEmail.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmail.FlatAppearance.BorderSize = 0;
+            this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmail.ForeColor = System.Drawing.Color.Chocolate;
+            this.btnEmail.Location = new System.Drawing.Point(0, 0);
+            this.btnEmail.Name = "btnEmail";
+            this.btnEmail.Size = new System.Drawing.Size(146, 46);
+            this.btnEmail.TabIndex = 0;
+            this.btnEmail.Text = "Welcome Admin!";
+            this.btnEmail.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -129,101 +131,102 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel4.Controls.Add(this.button6);
-            this.panel4.Controls.Add(this.button5);
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.button9);
-            this.panel4.Controls.Add(this.button10);
+            this.panel4.Controls.Add(this.btnGiveAccess);
+            this.panel4.Controls.Add(this.btnAddTransaction);
+            this.panel4.Controls.Add(this.btnManageStudentProfile);
+            this.panel4.Controls.Add(this.btnPendingTransactions);
+            this.panel4.Controls.Add(this.btnTransactionHistory);
+            this.panel4.Controls.Add(this.btnViewInventory);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 100);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 531);
             this.panel4.TabIndex = 9;
             // 
-            // button6
+            // btnGiveAccess
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(0, 300);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(200, 60);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Give Access";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnGiveAccess.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGiveAccess.FlatAppearance.BorderSize = 0;
+            this.btnGiveAccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGiveAccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGiveAccess.ForeColor = System.Drawing.Color.White;
+            this.btnGiveAccess.Location = new System.Drawing.Point(0, 300);
+            this.btnGiveAccess.Name = "btnGiveAccess";
+            this.btnGiveAccess.Size = new System.Drawing.Size(200, 60);
+            this.btnGiveAccess.TabIndex = 5;
+            this.btnGiveAccess.Text = "Give Access";
+            this.btnGiveAccess.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnAddTransaction
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 240);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 60);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Add Request";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnAddTransaction.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddTransaction.FlatAppearance.BorderSize = 0;
+            this.btnAddTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTransaction.ForeColor = System.Drawing.Color.White;
+            this.btnAddTransaction.Location = new System.Drawing.Point(0, 240);
+            this.btnAddTransaction.Name = "btnAddTransaction";
+            this.btnAddTransaction.Size = new System.Drawing.Size(200, 60);
+            this.btnAddTransaction.TabIndex = 4;
+            this.btnAddTransaction.Text = "Add Transaction";
+            this.btnAddTransaction.UseVisualStyleBackColor = true;
+            this.btnAddTransaction.Click += new System.EventHandler(this.btnAddRequest_Click);
             // 
-            // button4
+            // btnManageStudentProfile
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 180);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 60);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Manage Student Profile";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnManageStudentProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageStudentProfile.FlatAppearance.BorderSize = 0;
+            this.btnManageStudentProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageStudentProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageStudentProfile.ForeColor = System.Drawing.Color.White;
+            this.btnManageStudentProfile.Location = new System.Drawing.Point(0, 180);
+            this.btnManageStudentProfile.Name = "btnManageStudentProfile";
+            this.btnManageStudentProfile.Size = new System.Drawing.Size(200, 60);
+            this.btnManageStudentProfile.TabIndex = 3;
+            this.btnManageStudentProfile.Text = "Manage Student Profile";
+            this.btnManageStudentProfile.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnPendingTransactions
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 120);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 60);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Pending Transactions";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnPendingTransactions.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPendingTransactions.FlatAppearance.BorderSize = 0;
+            this.btnPendingTransactions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPendingTransactions.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPendingTransactions.ForeColor = System.Drawing.Color.White;
+            this.btnPendingTransactions.Location = new System.Drawing.Point(0, 120);
+            this.btnPendingTransactions.Name = "btnPendingTransactions";
+            this.btnPendingTransactions.Size = new System.Drawing.Size(200, 60);
+            this.btnPendingTransactions.TabIndex = 2;
+            this.btnPendingTransactions.Text = "Pending Transactions";
+            this.btnPendingTransactions.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnTransactionHistory
             // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(0, 60);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(200, 60);
-            this.button9.TabIndex = 1;
-            this.button9.Text = "Transaction History";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnTransactionHistory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTransactionHistory.FlatAppearance.BorderSize = 0;
+            this.btnTransactionHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransactionHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransactionHistory.ForeColor = System.Drawing.Color.White;
+            this.btnTransactionHistory.Location = new System.Drawing.Point(0, 60);
+            this.btnTransactionHistory.Name = "btnTransactionHistory";
+            this.btnTransactionHistory.Size = new System.Drawing.Size(200, 60);
+            this.btnTransactionHistory.TabIndex = 1;
+            this.btnTransactionHistory.Text = "Transaction History";
+            this.btnTransactionHistory.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btnViewInventory
             // 
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(0, 0);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(200, 60);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "View Inventory";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnViewInventory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnViewInventory.FlatAppearance.BorderSize = 0;
+            this.btnViewInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewInventory.ForeColor = System.Drawing.Color.White;
+            this.btnViewInventory.Location = new System.Drawing.Point(0, 0);
+            this.btnViewInventory.Name = "btnViewInventory";
+            this.btnViewInventory.Size = new System.Drawing.Size(200, 60);
+            this.btnViewInventory.TabIndex = 0;
+            this.btnViewInventory.Text = "View Inventory";
+            this.btnViewInventory.UseVisualStyleBackColor = true;
             // 
             // dgvTransaction
             // 
@@ -246,41 +249,52 @@
             this.btnPrintReport.UseVisualStyleBackColor = false;
             this.btnPrintReport.Click += new System.EventHandler(this.btnPrintReport_Click);
             // 
-            // btnDaily
+            // btnDailyReport
             // 
-            this.btnDaily.BackColor = System.Drawing.Color.Yellow;
-            this.btnDaily.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDaily.Location = new System.Drawing.Point(247, 560);
-            this.btnDaily.Name = "btnDaily";
-            this.btnDaily.Size = new System.Drawing.Size(95, 35);
-            this.btnDaily.TabIndex = 32;
-            this.btnDaily.Text = "Daily";
-            this.btnDaily.UseVisualStyleBackColor = false;
-            this.btnDaily.Click += new System.EventHandler(this.btnDaily_Click);
+            this.btnDailyReport.BackColor = System.Drawing.Color.Yellow;
+            this.btnDailyReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDailyReport.Location = new System.Drawing.Point(247, 560);
+            this.btnDailyReport.Name = "btnDailyReport";
+            this.btnDailyReport.Size = new System.Drawing.Size(95, 35);
+            this.btnDailyReport.TabIndex = 32;
+            this.btnDailyReport.Text = "Daily";
+            this.btnDailyReport.UseVisualStyleBackColor = false;
+            this.btnDailyReport.Click += new System.EventHandler(this.btnDaily_Click);
             // 
-            // btnWeekly
+            // btnWeeklyReport
             // 
-            this.btnWeekly.BackColor = System.Drawing.Color.Yellow;
-            this.btnWeekly.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWeekly.Location = new System.Drawing.Point(348, 560);
-            this.btnWeekly.Name = "btnWeekly";
-            this.btnWeekly.Size = new System.Drawing.Size(95, 35);
-            this.btnWeekly.TabIndex = 33;
-            this.btnWeekly.Text = "Weekly";
-            this.btnWeekly.UseVisualStyleBackColor = false;
-            this.btnWeekly.Click += new System.EventHandler(this.btnWeekly_Click);
+            this.btnWeeklyReport.BackColor = System.Drawing.Color.Yellow;
+            this.btnWeeklyReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWeeklyReport.Location = new System.Drawing.Point(348, 560);
+            this.btnWeeklyReport.Name = "btnWeeklyReport";
+            this.btnWeeklyReport.Size = new System.Drawing.Size(95, 35);
+            this.btnWeeklyReport.TabIndex = 33;
+            this.btnWeeklyReport.Text = "Weekly";
+            this.btnWeeklyReport.UseVisualStyleBackColor = false;
+            this.btnWeeklyReport.Click += new System.EventHandler(this.btnWeekly_Click);
             // 
-            // btnMonthly
+            // btnMonthlyReport
             // 
-            this.btnMonthly.BackColor = System.Drawing.Color.Yellow;
-            this.btnMonthly.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMonthly.Location = new System.Drawing.Point(449, 560);
-            this.btnMonthly.Name = "btnMonthly";
-            this.btnMonthly.Size = new System.Drawing.Size(95, 35);
-            this.btnMonthly.TabIndex = 34;
-            this.btnMonthly.Text = "Monthly";
-            this.btnMonthly.UseVisualStyleBackColor = false;
-            this.btnMonthly.Click += new System.EventHandler(this.btnMonthly_Click);
+            this.btnMonthlyReport.BackColor = System.Drawing.Color.Yellow;
+            this.btnMonthlyReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMonthlyReport.Location = new System.Drawing.Point(449, 560);
+            this.btnMonthlyReport.Name = "btnMonthlyReport";
+            this.btnMonthlyReport.Size = new System.Drawing.Size(95, 35);
+            this.btnMonthlyReport.TabIndex = 34;
+            this.btnMonthlyReport.Text = "Monthly";
+            this.btnMonthlyReport.UseVisualStyleBackColor = false;
+            this.btnMonthlyReport.Click += new System.EventHandler(this.btnMonthly_Click);
+            // 
+            // btnOverdue
+            // 
+            this.btnOverdue.BackColor = System.Drawing.Color.Yellow;
+            this.btnOverdue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOverdue.Location = new System.Drawing.Point(550, 560);
+            this.btnOverdue.Name = "btnOverdue";
+            this.btnOverdue.Size = new System.Drawing.Size(95, 35);
+            this.btnOverdue.TabIndex = 35;
+            this.btnOverdue.Text = "Overdue";
+            this.btnOverdue.UseVisualStyleBackColor = false;
             // 
             // FormTransactionHistory
             // 
@@ -288,9 +302,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1391, 631);
-            this.Controls.Add(this.btnMonthly);
-            this.Controls.Add(this.btnWeekly);
-            this.Controls.Add(this.btnDaily);
+            this.Controls.Add(this.btnOverdue);
+            this.Controls.Add(this.btnMonthlyReport);
+            this.Controls.Add(this.btnWeeklyReport);
+            this.Controls.Add(this.btnDailyReport);
             this.Controls.Add(this.btnPrintReport);
             this.Controls.Add(this.dgvTransaction);
             this.Controls.Add(this.panel4);
@@ -313,21 +328,22 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnEmail;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnGiveAccess;
+        private System.Windows.Forms.Button btnAddTransaction;
+        private System.Windows.Forms.Button btnManageStudentProfile;
+        private System.Windows.Forms.Button btnPendingTransactions;
+        private System.Windows.Forms.Button btnTransactionHistory;
+        private System.Windows.Forms.Button btnViewInventory;
         private System.Windows.Forms.DataGridView dgvTransaction;
         private System.Windows.Forms.Button btnPrintReport;
-        private System.Windows.Forms.Button btnDaily;
-        private System.Windows.Forms.Button btnWeekly;
-        private System.Windows.Forms.Button btnMonthly;
+        private System.Windows.Forms.Button btnDailyReport;
+        private System.Windows.Forms.Button btnWeeklyReport;
+        private System.Windows.Forms.Button btnMonthlyReport;
+        private System.Windows.Forms.Button btnOverdue;
     }
 }

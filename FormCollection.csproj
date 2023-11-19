@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,11 +55,89 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\Author.cs">
+      <DependentUpon>GlendaleLibraryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Book.cs">
+      <DependentUpon>GlendaleLibraryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Category.cs">
+      <DependentUpon>GlendaleLibraryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GlendaleLibraryModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlendaleLibraryModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GlendaleLibraryModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlendaleLibraryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GlendaleLibraryModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlendaleLibraryModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Order.cs">
+      <DependentUpon>GlendaleLibraryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\OrderDetail.cs">
+      <DependentUpon>GlendaleLibraryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Publisher.cs">
+      <DependentUpon>GlendaleLibraryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Role.cs">
+      <DependentUpon>GlendaleLibraryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Row.cs">
+      <DependentUpon>GlendaleLibraryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Shelf.cs">
+      <DependentUpon>GlendaleLibraryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Status.cs">
+      <DependentUpon>GlendaleLibraryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Student.cs">
+      <DependentUpon>GlendaleLibraryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SubCategory.cs">
+      <DependentUpon>GlendaleLibraryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Transaction.cs">
+      <DependentUpon>GlendaleLibraryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TransactionDetail.cs">
+      <DependentUpon>GlendaleLibraryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\User.cs">
+      <DependentUpon>GlendaleLibraryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\UserLogin.cs">
+      <DependentUpon>GlendaleLibraryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dto\BookDto.cs" />
+    <Compile Include="Dto\SearchDto.cs" />
+    <Compile Include="Dto\UserDto.cs" />
     <Compile Include="Forms\FormAddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormAddStudent.Designer.cs">
       <DependentUpon>FormAddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddTransaction.Designer.cs">
+      <DependentUpon>FormAddTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormConfigure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormConfigure.Designer.cs">
+      <DependentUpon>FormConfigure.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormEdit.cs">
       <SubType>Form</SubType>
@@ -82,12 +169,6 @@
     <Compile Include="Forms\FormPendingEdit.Designer.cs">
       <DependentUpon>FormPendingEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormSearchByStudent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormSearchByStudent.Designer.cs">
-      <DependentUpon>FormSearchByStudent.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FormTransactionHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,30 +181,17 @@
     <Compile Include="Forms\FormViewInventory.Designer.cs">
       <DependentUpon>FormViewInventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="GlendaleLibrarySystemDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GlendaleLibrarySystemDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="_GlendaleLibrarySystem_TestDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_GlendaleLibrarySystem_TestDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="_GlendaleLibrarySystem_TestDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_GlendaleLibrarySystem_TestDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="_GlendaleLibrarySystem_TestDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_GlendaleLibrarySystem_TestDataSet2.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Forms\FormAddStudent.resx">
       <DependentUpon>FormAddStudent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddTransaction.resx">
+      <DependentUpon>FormAddTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormConfigure.resx">
+      <DependentUpon>FormConfigure.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormEdit.resx">
       <DependentUpon>FormEdit.cs</DependentUpon>
@@ -139,9 +207,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormPendingEdit.resx">
       <DependentUpon>FormPendingEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormSearchByStudent.resx">
-      <DependentUpon>FormSearchByStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormTransactionHistory.resx">
       <DependentUpon>FormTransactionHistory.cs</DependentUpon>
@@ -159,17 +224,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="GlendaleLibrarySystemDataSet.xsc">
-      <DependentUpon>GlendaleLibrarySystemDataSet.xsd</DependentUpon>
+    <EntityDeploy Include="Database\GlendaleLibraryModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GlendaleLibraryModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Database\GlendaleLibraryModel.edmx.diagram">
+      <DependentUpon>GlendaleLibraryModel.edmx</DependentUpon>
     </None>
-    <None Include="GlendaleLibrarySystemDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GlendaleLibrarySystemDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GlendaleLibrarySystemDataSet.xss">
-      <DependentUpon>GlendaleLibrarySystemDataSet.xsd</DependentUpon>
-    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -179,45 +241,27 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="_GlendaleLibrarySystem_TestDataSet.xsc">
-      <DependentUpon>_GlendaleLibrarySystem_TestDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_GlendaleLibrarySystem_TestDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_GlendaleLibrarySystem_TestDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_GlendaleLibrarySystem_TestDataSet.xss">
-      <DependentUpon>_GlendaleLibrarySystem_TestDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_GlendaleLibrarySystem_TestDataSet1.xsc">
-      <DependentUpon>_GlendaleLibrarySystem_TestDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="_GlendaleLibrarySystem_TestDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_GlendaleLibrarySystem_TestDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_GlendaleLibrarySystem_TestDataSet1.xss">
-      <DependentUpon>_GlendaleLibrarySystem_TestDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="_GlendaleLibrarySystem_TestDataSet2.xsc">
-      <DependentUpon>_GlendaleLibrarySystem_TestDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="_GlendaleLibrarySystem_TestDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_GlendaleLibrarySystem_TestDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_GlendaleLibrarySystem_TestDataSet2.xss">
-      <DependentUpon>_GlendaleLibrarySystem_TestDataSet2.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\GLENDALE_icon-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\GlendaleLibraryModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GlendaleLibraryModel.edmx</DependentUpon>
+      <LastGenOutput>GlendaleLibraryModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\GlendaleLibraryModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GlendaleLibraryModel.edmx</DependentUpon>
+      <LastGenOutput>GlendaleLibraryModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

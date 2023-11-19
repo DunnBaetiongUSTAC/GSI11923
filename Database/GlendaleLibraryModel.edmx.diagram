@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="db88a191fc8f4e7198a71353bc6e9a48" Name="Diagram1" ZoomLevel="75">
+        <EntityTypeShape EntityType="GlendaleLibrarySystemModel.Author" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlendaleLibrarySystemModel.Category" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlendaleLibrarySystemModel.Order" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlendaleLibrarySystemModel.OrderDetail" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlendaleLibrarySystemModel.Publisher" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlendaleLibrarySystemModel.Role" Width="1.5" PointX="1.5" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlendaleLibrarySystemModel.Row" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlendaleLibrarySystemModel.Shelf" Width="1.5" PointX="0.75" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlendaleLibrarySystemModel.Status" Width="1.5" PointX="0.75" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlendaleLibrarySystemModel.SubCategory" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlendaleLibrarySystemModel.Transaction" Width="1.5" PointX="3" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlendaleLibrarySystemModel.TransactionDetail" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlendaleLibrarySystemModel.UserLogin" Width="1.5" PointX="3" PointY="26.75" IsExpanded="true" />
+        <AssociationConnector Association="GlendaleLibrarySystemModel.FK_OrderDetail_Order1" ManuallyRouted="false" />
+        <AssociationConnector Association="GlendaleLibrarySystemModel.FK_Transaction_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="GlendaleLibrarySystemModel.FK_TransactionDetail_Transaction" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="GlendaleLibrarySystemModel.User" Width="1.5" PointX="0.75" PointY="25.25" />
+        <AssociationConnector Association="GlendaleLibrarySystemModel.FK_User_Role1" />
+        <AssociationConnector Association="GlendaleLibrarySystemModel.FK_Transaction_User" />
+        <AssociationConnector Association="GlendaleLibrarySystemModel.FK_UserLogin_UserLogin" />
+        <EntityTypeShape EntityType="GlendaleLibrarySystemModel.Book" Width="1.5" PointX="3" PointY="2.25" />
+        <AssociationConnector Association="GlendaleLibrarySystemModel.FK_Book_Author" />
+        <AssociationConnector Association="GlendaleLibrarySystemModel.FK_Book_Category" />
+        <AssociationConnector Association="GlendaleLibrarySystemModel.FK_Book_Publisher" />
+        <AssociationConnector Association="GlendaleLibrarySystemModel.FK_Book_Row" />
+        <AssociationConnector Association="GlendaleLibrarySystemModel.FK_Book_Shelf" />
+        <AssociationConnector Association="GlendaleLibrarySystemModel.FK_Book_SubCategory" />
+        <AssociationConnector Association="GlendaleLibrarySystemModel.FK_OrderDetail_Book" />
+        <AssociationConnector Association="GlendaleLibrarySystemModel.FK_TransactionDetail_Book" />
+        <EntityTypeShape EntityType="GlendaleLibrarySystemModel.Student" Width="1.5" PointX="0.75" PointY="19.625" />
+        <AssociationConnector Association="GlendaleLibrarySystemModel.FK_Transaction_Student" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -8,13 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using FormCollection.Database;
 namespace FormCollection.Forms
 {
 
     public partial class FormTransactionHistory : Form
     {
-       
+
+        GlendaleLibrarySystemEntities db = new GlendaleLibrarySystemEntities();
 
         private void PopulateTransactionTable(string timeInterval)
         {
@@ -89,12 +90,14 @@ namespace FormCollection.Forms
 
         }
 
-
-        public FormTransactionHistory()
+        private string _emailAddress { get; set; }
+        public FormTransactionHistory(string emailAddress)
         {
             InitializeComponent();
             this.Size = new Size(1400, 670);
             MaximizeBox = false;
+            _emailAddress = emailAddress;
+            btnEmail.Text = _emailAddress;
         }
 
         private void bookDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -125,6 +128,20 @@ namespace FormCollection.Forms
         private void FormTransactionHistory_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            FormLogin flog = new FormLogin();
+            flog.Show();
+            this.Hide();
+        }
+
+        private void btnAddRequest_Click(object sender, EventArgs e)
+        {
+            FormAddTransaction trans = new FormAddTransaction(_emailAddress);
+            trans.Show();
+            this.Hide();
         }
     }
 }

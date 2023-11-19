@@ -1,33 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using FormCollection.Database;
+using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FormCollection.Forms
 {
     public partial class FormAddStudent : Form
     {
-        private readonly string connectionString = @"Data Source=LUWEESE; Initial Catalog=GlendaleLibrarySystem-Test; Integrated Security=true";
+        GlendaleLibrarySystemEntities db = new GlendaleLibrarySystemEntities();
 
-        public FormAddStudent()
+        private string _emailAddress { get; set; }
+
+        public FormAddStudent(string emailAddress)
         {
 
             InitializeComponent();
             this.Size = new Size(1400, 670);
             MaximizeBox = false;
+            _emailAddress = emailAddress;
+            btnEmail.Text = _emailAddress;
+
         }
 
         private void FormAddStudent_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_GlendaleLibrarySystem_TestDataSet1.Student' table. You can move, or remove it, as needed.
-            this.studentTableAdapter.Fill(this._GlendaleLibrarySystem_TestDataSet1.Student);
-
+            dgvAddStudent.DataSource = db.Student.ToList();
         }
 
         private void bookDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -37,36 +36,31 @@ namespace FormCollection.Forms
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtStudentID.Text) || string.IsNullOrWhiteSpace(txtStudentFName.Text) || string.IsNullOrWhiteSpace(txtStudentMName.Text) || string.IsNullOrWhiteSpace(txtStudentLName.Text) || string.IsNullOrWhiteSpace(txtStudentSuffix.Text) || string.IsNullOrWhiteSpace(txtStudentEmail.Text))
+            if (string.IsNullOrWhiteSpace(txtStudentFName.Text) || string.IsNullOrWhiteSpace(txtStudentLName.Text) || string.IsNullOrWhiteSpace(txtStudentEmail.Text) || string.IsNullOrWhiteSpace(txtStudentNumber.Text))
             {
-                MessageBox.Show("StudentID, Student Name, and Email are required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Student Number, Student Name, and Email are required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                db.Student.Add(new Student()
                 {
-                    con.Open();
+                    StudentNumber = Convert.ToInt32(txtStudentNumber.Text),
+                    FirstName = txtStudentFName.Text,
+                    MiddleName = txtStudentMName.Text,
+                    LastName = txtStudentLName.Text,
+                    Suffix = txtStudentSuffix.Text,
+                    EmailAddress = txtStudentEmail.Text
+                });
 
-                    string query = @"INSERT INTO Student (StudentId, FirstName, MiddleName, LastName, Suffix, EmailAddress) VALUES (@StudentId, @FirstName, @MiddleName, @LastName, @Suffix, @EmailAddress) ";
+                db.SaveChanges();
 
-                    using (SqlCommand command = new SqlCommand(query, con))
-                    {
-                        command.Parameters.AddWithValue("@StudentId", txtStudentID.Text);
-                        command.Parameters.AddWithValue("@FirstName", txtStudentFName.Text);
-                        command.Parameters.AddWithValue("@MiddleName", txtStudentMName.Text);
-                        command.Parameters.AddWithValue("@LastName", txtStudentLName.Text);
-                        command.Parameters.AddWithValue("Suffix", txtStudentSuffix.Text);
-                        command.Parameters.AddWithValue("@EmailAddress", txtStudentEmail.Text);
+                MessageBox.Show("Student added Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        command.ExecuteNonQuery();
+                ClearInputFields();
 
-                        MessageBox.Show("Student added Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        ClearInputFields();
-                    }
-                }
+                dgvAddStudent.DataSource = db.Student.ToList();
             }
             catch (Exception ex)
             {
@@ -76,7 +70,7 @@ namespace FormCollection.Forms
         }
         private void ClearInputFields()
         {
-            txtStudentID.Clear();
+            txtStudentNumber.Clear();
             txtStudentFName.Clear();
             txtStudentMName.Clear();
             txtStudentLName.Clear();
@@ -91,36 +85,16 @@ namespace FormCollection.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtSearch.Text))
+            if (string.IsNullOrWhiteSpace(txtStudentSearch.Text))
             {
-                MessageBox.Show("Please enter a Student ID to Search", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a Student Number to Search", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dgvAddStudent.DataSource = db.Student.ToList();
             }
 
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
-                {
-                    con.Open();
-
-                    string query = "SELECT * FROM Student WHERE StudentId = @StudentId";
-                    using (SqlCommand command = new SqlCommand(query, con))
-                    {
-                        command.Parameters.AddWithValue("@StudentId", txtSearch.Text);
-
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                        {
-                            DataTable dataTable = new DataTable();
-                            adapter.Fill(dataTable);
-
-                            bookDataGridView.DataSource = dataTable;
-                            if (dataTable.Rows.Count == 0)
-                            {
-                                MessageBox.Show("No student found with the provided Student ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-         
-                        }
-                    }
-                }
+                if (int.TryParse(txtStudentSearch.Text, out int value))
+                    dgvAddStudent.DataSource = db.Student.Where(m => m.StudentNumber == value).ToList();
             }
             catch (Exception ex)
             {
@@ -132,7 +106,82 @@ namespace FormCollection.Forms
         {
 
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtStudentNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormAddStudent_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //FormViewInventory formViewInventory = new FormViewInventory(_emailAddress);
+            //formViewInventory.Show();
+            //this.Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            FormLogin flog = new FormLogin();
+            flog.Show();
+            this.Hide();
+        }
+
+        private void btnAddRequest_Click(object sender, EventArgs e)
+        {
+            FormAddTransaction trans = new FormAddTransaction(_emailAddress);
+            trans.Show();
+            this.Hide();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            FormViewInventory inv = new FormViewInventory(_emailAddress);
+            inv.Show();
+            inv.Hide();
+        }
+
+        private void btnTransactionHistory_Click(object sender, EventArgs e)
+        {
+            FormTransactionHistory history = new FormTransactionHistory(_emailAddress);
+            history.Show();
+            this.Hide();
+        }
+
+        private void btnPendingTransactions_Click(object sender, EventArgs e)
+        {
+            FormPending pen = new FormPending(_emailAddress);
+            pen.Show();
+            pen.Hide();
+        }
+
+        private void btnStudent_Click(object sender, EventArgs e)
+        {
+            FormAddStudent stud = new FormAddStudent(_emailAddress);
+            stud.Show();
+            stud.Hide(); 
+        }
+
+        private void btnGiveAccess_Click(object sender, EventArgs e)
+        {
+            FormGiveAccess give = new FormGiveAccess(_emailAddress);
+            give.Show();
+            give.Hide();
+        }
+
+        private void btnStudentEdit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-    
 }
 

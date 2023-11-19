@@ -1,6 +1,6 @@
 ﻿namespace FormCollection.Forms
 {
-    partial class FormViewInventory
+    partial class FormAddTransaction
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -43,21 +42,23 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnGiveAccess = new System.Windows.Forms.Button();
-            this.btnAddTransaction = new System.Windows.Forms.Button();
+            this.btnAddRequest = new System.Windows.Forms.Button();
             this.btnManageStudentProfile = new System.Windows.Forms.Button();
             this.btnPendingTransaction = new System.Windows.Forms.Button();
             this.btnTransactionHistory = new System.Windows.Forms.Button();
             this.btnViewInventory = new System.Windows.Forms.Button();
             this.dgvSearch = new System.Windows.Forms.DataGridView();
-            this.btnEditInv = new System.Windows.Forms.Button();
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvCart = new System.Windows.Forms.DataGridView();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,8 +75,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1349, 100);
-            this.panel1.TabIndex = 6;
+            this.panel1.Size = new System.Drawing.Size(1366, 100);
+            this.panel1.TabIndex = 7;
             // 
             // panel4
             // 
@@ -98,7 +99,7 @@
             this.btnLogout.TabIndex = 2;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.button8_Click);
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // txtSearch
             // 
@@ -106,7 +107,6 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(294, 20);
             this.txtSearch.TabIndex = 8;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged_1);
             // 
             // panel3
             // 
@@ -174,7 +174,6 @@
             this.cmbSearch.Name = "cmbSearch";
             this.cmbSearch.Size = new System.Drawing.Size(121, 21);
             this.cmbSearch.TabIndex = 1;
-            this.cmbSearch.SelectedIndexChanged += new System.EventHandler(this.cmbSearch_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -205,7 +204,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel2.Controls.Add(this.btnGiveAccess);
-            this.panel2.Controls.Add(this.btnAddTransaction);
+            this.panel2.Controls.Add(this.btnAddRequest);
             this.panel2.Controls.Add(this.btnManageStudentProfile);
             this.panel2.Controls.Add(this.btnPendingTransaction);
             this.panel2.Controls.Add(this.btnTransactionHistory);
@@ -213,8 +212,8 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 532);
-            this.panel2.TabIndex = 7;
+            this.panel2.Size = new System.Drawing.Size(200, 485);
+            this.panel2.TabIndex = 8;
             // 
             // btnGiveAccess
             // 
@@ -231,20 +230,20 @@
             this.btnGiveAccess.UseVisualStyleBackColor = true;
             this.btnGiveAccess.Click += new System.EventHandler(this.btnGiveAccess_Click);
             // 
-            // btnAddTransaction
+            // btnAddRequest
             // 
-            this.btnAddTransaction.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddTransaction.FlatAppearance.BorderSize = 0;
-            this.btnAddTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTransaction.ForeColor = System.Drawing.Color.White;
-            this.btnAddTransaction.Location = new System.Drawing.Point(0, 240);
-            this.btnAddTransaction.Name = "btnAddTransaction";
-            this.btnAddTransaction.Size = new System.Drawing.Size(200, 60);
-            this.btnAddTransaction.TabIndex = 4;
-            this.btnAddTransaction.Text = "Add Transaction";
-            this.btnAddTransaction.UseVisualStyleBackColor = true;
-            this.btnAddTransaction.Click += new System.EventHandler(this.btnAddRequest_Click);
+            this.btnAddRequest.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddRequest.FlatAppearance.BorderSize = 0;
+            this.btnAddRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddRequest.ForeColor = System.Drawing.Color.White;
+            this.btnAddRequest.Location = new System.Drawing.Point(0, 240);
+            this.btnAddRequest.Name = "btnAddRequest";
+            this.btnAddRequest.Size = new System.Drawing.Size(200, 60);
+            this.btnAddRequest.TabIndex = 4;
+            this.btnAddRequest.Text = "Add Transaction";
+            this.btnAddRequest.UseVisualStyleBackColor = true;
+            this.btnAddRequest.Click += new System.EventHandler(this.btnAddRequest_Click);
             // 
             // btnManageStudentProfile
             // 
@@ -304,49 +303,70 @@
             this.btnViewInventory.TabIndex = 0;
             this.btnViewInventory.Text = "View Inventory";
             this.btnViewInventory.UseVisualStyleBackColor = true;
-            this.btnViewInventory.Click += new System.EventHandler(this.button1_Click);
+            this.btnViewInventory.Click += new System.EventHandler(this.btnViewInventory_Click);
             // 
             // dgvSearch
             // 
             this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearch.Location = new System.Drawing.Point(256, 142);
+            this.dgvSearch.Location = new System.Drawing.Point(229, 132);
             this.dgvSearch.Name = "dgvSearch";
-            this.dgvSearch.Size = new System.Drawing.Size(1043, 415);
-            this.dgvSearch.TabIndex = 8;
-            this.dgvSearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookDataGridView_CellContentClick);
+            this.dgvSearch.Size = new System.Drawing.Size(724, 344);
+            this.dgvSearch.TabIndex = 9;
             // 
-            // btnEditInv
+            // dgvCart
             // 
-            this.btnEditInv.BackColor = System.Drawing.Color.Yellow;
-            this.btnEditInv.FlatAppearance.BorderSize = 0;
-            this.btnEditInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditInv.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditInv.ForeColor = System.Drawing.Color.Black;
-            this.btnEditInv.Location = new System.Drawing.Point(1216, 576);
-            this.btnEditInv.Name = "btnEditInv";
-            this.btnEditInv.Size = new System.Drawing.Size(83, 23);
-            this.btnEditInv.TabIndex = 7;
-            this.btnEditInv.Text = "Edit";
-            this.btnEditInv.UseVisualStyleBackColor = false;
-            this.btnEditInv.Click += new System.EventHandler(this.btnEditInv_Click);
+            this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCart.Location = new System.Drawing.Point(1004, 132);
+            this.dgvCart.Name = "dgvCart";
+            this.dgvCart.Size = new System.Drawing.Size(289, 344);
+            this.dgvCart.TabIndex = 10;
             // 
-            // bookBindingSource
+            // btnAdd
             // 
-            this.bookBindingSource.DataMember = "Book";
+            this.btnAdd.Location = new System.Drawing.Point(528, 497);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 11;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // FormViewInventory
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(1069, 497);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnRemove.TabIndex = 12;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Location = new System.Drawing.Point(1168, 496);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.TabIndex = 13;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // FormAddTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(1349, 632);
-            this.Controls.Add(this.btnEditInv);
+            this.ClientSize = new System.Drawing.Size(1366, 585);
+            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.dgvCart);
             this.Controls.Add(this.dgvSearch);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "FormViewInventory";
-            this.Load += new System.EventHandler(this.FormViewInventory_Load);
+            this.Name = "FormAddTransaction";
+            this.Text = "FormAddTransaction";
+            this.Load += new System.EventHandler(this.FormAddTransaction_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -355,7 +375,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -363,6 +383,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbSearch;
@@ -370,21 +396,15 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnGiveAccess;
-        private System.Windows.Forms.Button btnAddTransaction;
+        private System.Windows.Forms.Button btnAddRequest;
         private System.Windows.Forms.Button btnManageStudentProfile;
         private System.Windows.Forms.Button btnPendingTransaction;
         private System.Windows.Forms.Button btnTransactionHistory;
         private System.Windows.Forms.Button btnViewInventory;
         private System.Windows.Forms.DataGridView dgvSearch;
-        private System.Windows.Forms.Button btnEditInv;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtSearch;
-        
-        private System.Windows.Forms.BindingSource bookBindingSource;
-        
-        private System.Windows.Forms.Label labelEmail;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.DataGridView dgvCart;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnSubmit;
     }
 }

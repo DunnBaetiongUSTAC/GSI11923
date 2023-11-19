@@ -17,7 +17,7 @@ namespace FormCollection
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormViewInventory());
+            Application.Run(new FormGiveAccess(""));
         }
     }
 }
